@@ -1,0 +1,9 @@
+<%= form_for([@message, @message.comments.build]) do |f| %>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_field :content, class: "form-control" %>
+  </div>
+  <div class="field mt-3">
+    <%= f.submit "Create comment", class: "btn btn-custom" %>
+  </div>
+<% end %>
